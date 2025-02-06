@@ -1,0 +1,109 @@
+body{
+overflow-x: hidden;
+}
+
+::-webkit-scrollbar{
+width: 10px;
+height: 80px;
+}
+
+::-webkit-scrollbar-track{
+background: transparent;height: 15px;
+}
+::-webkit-scrollbar-thumb{
+background: rgba(2, 26, 236, 0.897);
+
+}
+/*=========TEXT `REVEAL CSS========*/
+
+.clip-text {
+    display: inline-block;
+    clip-path: inset(0 0 100% 0);
+    transition: clip-path 2s, opacity 2s;
+    opacity: 0;
+}
+
+.clip-text:target {
+    clip-path: inset(0 0 0 0);
+    opacity: 1;
+}
+
+/* Just for demonstration to ensure there's space to scroll */
+
+
+
+@keyframes revealAnimation {
+    0% {
+        clip-path: inset(0 0 100% 0);
+        opacity: 0;
+    }
+    100% {
+        clip-path: inset(0 0 0 0);
+        opacity: 1;
+    }
+}
+
+.clip-text {
+    display: inline-block;
+    animation: revealAnimation  forwards;
+    animation-timeline: view(90vh 0vh);
+
+    /* Adjust animation timing and easing as needed */
+}
+
+    .programms {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
+      gap: 5px; /* Reduced space between items */
+      padding: 10px; /* Optional padding around the grid */
+    }
+
+
+
+        .container {
+      width: 100%;
+      height: auto;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .section {
+      color: white;
+      padding: 15px 10px 15px 25px;
+      position: relative;
+    }
+
+    .excellence {
+      background: #f44336d0; /* Red background */
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      font-weight: bold;
+      margin: 0;
+      line-height: 1.2;
+    }
+
+    p {
+      font-size: 1rem;
+      margin-top: 10px;
+      line-height: 1.6;
+    }
+
+    .divider {
+      background: white;
+      width: 5px;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 10px;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+      p {
+        font-size: 0.9rem;
+      }
+    }

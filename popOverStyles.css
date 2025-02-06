@@ -1,0 +1,118 @@
+#Programms{
+position: absolute;
+top: 50dvh;
+left: 50dwv;
+}
+
+.horizontal-line{
+width: 50%;
+margin: auto;
+background: blue;
+height: 2px;
+
+}
+
+/* 
+p::first-letter{
+    color: blue;
+    font-size: xx-large;
+} */
+
+
+
+
+.hero-content-box::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: rgba(0, 0, 0, 0.205); /* Adjust opacity */
+z-index: 1;
+}
+
+
+  .hero-frame {
+    border: 3px solid white;
+    padding: 30px;
+   width: 80%;
+    max-height: 350px;
+    /* max-width: 550px; */
+    position: absolute;
+    top:10%;
+    left:5%;
+    color: white;
+    z-index:2;
+  }
+
+  .hero-frame h1 {
+    font-size: 2dvw;
+    font-weight:1.8rem;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    text-align: left;
+
+    text-transform: uppercase;
+  }
+
+  .hero-frame .highlight {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #2a06cc;
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    background: white;
+        padding: 5px 10px;
+    border-radius: 10px;
+  }
+
+  .hero-frame button {
+    display: block;
+    width: 50%;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    border: none;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+  }
+
+
+  .orangeBtn{
+    background:orange;
+    border: none;
+    outline: none;
+    padding: 0.8rem;
+  }
+
+  .btn-blue:hover {
+    background: #1565c0;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .hero-frame {
+      max-width: 300px;
+      padding: 20px;
+    }
+
+    .hero-frame h1 {
+      font-size: 1.5rem;
+    }
+
+    .hero-frame .highlight {
+      font-size: 2rem;
+      top: -30px;
+      right: -30px;
+    }
+
+    .hero-frame button {
+      font-size: 0.9rem;
+    }
+  }
+
